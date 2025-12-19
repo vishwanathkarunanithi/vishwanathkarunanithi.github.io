@@ -98,18 +98,19 @@ h2{
     font-size:14px;
 }
 
-/* ================== ADDED (ACHIEVEMENTS ONLY) ================== */
+/* ===== ADDED (ACHIEVEMENTS ONLY) ===== */
 .scroll-img{
     width:100%;
     height:160px;
     overflow:auto;
     border-radius:6px;
+    border:1px solid #e5e7eb;
+    cursor:pointer;
 }
 .scroll-img img{
     max-width:none;
     max-height:none;
     display:block;
-    cursor:pointer;
 }
 .scroll-img::-webkit-scrollbar{
     width:6px;
@@ -132,7 +133,7 @@ h2{
     max-width:95%;
     max-height:95%;
 }
-/* =============================================================== */
+/* ==================================== */
 
 button.toggle{
     position:fixed;
@@ -215,6 +216,9 @@ Finalist – YUKTI Innovation 2025 | Hackathon Winner | Embedded & IoT
 <p>
 Electronics and Communication Engineering student with strong hands-on experience in embedded systems,
 Internet of Things, software-based systems, and artificial intelligence applications.
+Experienced in Piracy Prevention and Detection, Structural Health Monitoring,
+Smart Non-Invasive Health Monitoring, Electricity Tampering Detection and Smart Energy Meter,
+Exam Hall Allocation (Embedded System), and Face Detection using AI.
 </p>
 </section>
 
@@ -240,6 +244,24 @@ Internet of Things, software-based systems, and artificial intelligence applicat
 <p>Non-invasive system for tracking vital health parameters.</p>
 </div>
 
+<div class="project-card">
+<img src="proj_energy_1.jpg">
+<b>Electricity Tampering Detection and Smart Energy Meter</b>
+<p>Embedded IoT-based system for real-time energy monitoring.</p>
+</div>
+
+<div class="project-card">
+<img src="proj_exam_1.jpg">
+<b>Exam Hall Allocation System (Embedded)</b>
+<p>Microcontroller-based automated seat allocation system.</p>
+</div>
+
+<div class="project-card">
+<img src="project2.jpg">
+<b>Face Detection Using Artificial Intelligence</b>
+<p>AI-powered computer vision system for real-time face detection.</p>
+</div>
+
 </div>
 </section>
 
@@ -259,6 +281,27 @@ Internet of Things, software-based systems, and artificial intelligence applicat
 <img src="ach_2.jpg">
 </div>
 <p>First Prize – Inter College Project Expo</p>
+</div>
+
+<div class="gallery-item">
+<div class="scroll-img" onclick="openFull(this)">
+<img src="intern_1.jpg">
+</div>
+<p>Winner – 24 Hour Hackathon at VIT</p>
+</div>
+
+<div class="gallery-item">
+<div class="scroll-img" onclick="openFull(this)">
+<img src="intern_2.jpg">
+</div>
+<p>Internship – One Yes Info Tech (EEPROM Project)</p>
+</div>
+
+<div class="gallery-item">
+<div class="scroll-img" onclick="openFull(this)">
+<img src="iv_1.jpg">
+</div>
+<p>Industrial Visit – IIT Communication Laboratory</p>
 </div>
 
 <div class="gallery-item">
@@ -292,6 +335,8 @@ Internet of Things, software-based systems, and artificial intelligence applicat
 </form>
 <p>Email: visisiva.09@gmail.com</p>
 <p>Phone: +91 9345247382</p>
+<p>LinkedIn: linkedin.com/in/vishwanath-karunanithi-087b62308</p>
+<p>GitHub: github.com/vishwanathkarunanithi</p>
 </section>
 
 <footer>
@@ -308,7 +353,8 @@ function toggleDark(){
 
 /* ADDED */
 function openFull(el){
-    document.getElementById("fullImg").src = el.querySelector("img").src;
+    document.getElementById("fullImg").src =
+        el.querySelector("img").src;
     document.getElementById("fullscreen").style.display = "flex";
 }
 function closeFull(){
