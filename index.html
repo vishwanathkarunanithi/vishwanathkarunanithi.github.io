@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vishwanath Karunanithi | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f6f8;
+    color:#1f2937;
+    transition:0.3s;
+}
+body.dark{background:#0f172a;color:#e5e7eb}
+header{
+    background:#1e3a8a;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+header img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid #fff;
+}
+nav{
+    background:#020617;
+    padding:12px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+nav a{
+    color:#fff;
+    margin:0 12px;
+    text-decoration:none;
+    font-size:14px;
+}
+section{
+    background:#fff;
+    margin:25px auto;
+    padding:25px;
+    max-width:1000px;
+    border-radius:10px;
+}
+body.dark section{background:#020617}
+h2{color:#1e3a8a}
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.project-card img{
+    width:100%;
+    border-radius:6px;
+}
+button.toggle{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:10px;
+    border:none;
+    border-radius:50%;
+    background:#1e3a8a;
+    color:#fff;
+    cursor:pointer;
+}
+footer{
+    background:#020617;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleDark()">🌙</button>
+
+<header>
+<img src="profile.jpg">
+<h1>Vishwanath Karunanithi</h1>
+<p>ECE | Embedded Systems | IoT | AI</p>
+<a href="Vishwanath_Karunanithi_Resume.pdf" style="color:white;font-weight:bold">Download Resume</a>
+</header>
+
+<nav>
+<a href="#overview">Overview</a>
+<a href="#projects">Projects</a>
+<a href="#mini">Mini Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="overview">
+<h2>Overview</h2>
+<p>
+Electronics and Communication Engineering student with hands-on experience in
+Piracy Prevention & Detection, Structural Health Monitoring (Software),
+Smart Non-Invasive Health Monitoring, Electricity Tampering Detection & Smart Energy Meter,
+Exam Hall Allocation (Embedded), and Face Detection using AI.
+</p>
+</section>
+
+<section id="projects">
+<h2>Major Projects</h2>
+<div class="projects">
+
+<div class="project-card">
+<img src="proj_energy_1.jpg">
+<p><b>Electricity Tampering Detection & Smart Energy Meter</b></p>
+<a href="https://github.com/vishwanathkarunanithi">View on GitHub</a>
+</div>
+
+<div class="project-card">
+<img src="project2.jpg">
+<p><b>Face Detection using AI</b></p>
+<a href="https://github.com/vishwanathkarunanithi">View on GitHub</a>
+</div>
+
+<div class="project-card">
+<img src="proj_exam_1.jpg">
+<p><b>Exam Hall Seat Allocation (Embedded)</b></p>
+<a href="https://github.com/vishwanathkarunanithi">View on GitHub</a>
+</div>
+
+</div>
+</section>
+
+<section id="mini">
+<h2>Mini Projects & Activities</h2>
+<ul>
+<li>Otto Blockly Robot with Mobile App</li>
+<li>Home Automation using Alexa & Sinric Pro</li>
+<li>Bluetooth LED Control using MIT App Inventor</li>
+<li>LABVIEW – Completed all basic exercises</li>
+<li>Conducted 3-day workshop for 60 school students</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<form action="mailto:visisiva.09@gmail.com" method="post" enctype="text/plain">
+<input placeholder="Name" required><br><br>
+<input placeholder="Email" required><br><br>
+<textarea placeholder="Message"></textarea><br><br>
+<button type="submit">Send</button>
+</form>
+</section>
+
+<footer>
+<p>© 2025 Vishwanath Karunanithi</p>
+<img src="qr_portfolio.png" width="90">
+<img src="qr_resume.png" width="90">
+</footer>
+
+<script>
+function toggleDark(){document.body.classList.toggle('dark')}
+</script>
+
+</body>
+</html>
