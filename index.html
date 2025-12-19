@@ -104,6 +104,29 @@ body.dark .project-card{
     font-weight:bold;
     text-decoration:none;
 }
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+}
+.gallery-item{
+    text-align:center;
+}
+.gallery-item img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:6px;
+    border:1px solid #e5e7eb;
+}
+.gallery-item p{
+    margin-top:8px;
+    font-size:14px;
+}
+
+/* TOGGLE */
 button.toggle{
     position:fixed;
     bottom:20px;
@@ -115,6 +138,8 @@ button.toggle{
     color:#ffffff;
     cursor:pointer;
 }
+
+/* FOOTER */
 footer{
     background:#020617;
     color:#ffffff;
@@ -125,6 +150,8 @@ footer img{
     width:90px;
     margin:6px;
 }
+
+/* FORM */
 input, textarea{
     width:100%;
     max-width:400px;
@@ -157,6 +184,7 @@ button[type="submit"]{
 <nav>
 <a href="#overview">Overview</a>
 <a href="#projects">Major Projects</a>
+<a href="#gallery">Achievements</a>
 <a href="#mini">Mini Projects</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -178,45 +206,77 @@ Exam Hall Allocation (Embedded System), and Face Detection using AI.
 <div class="projects">
 
 <div class="project-card">
-<img src="proj_piracy.jpg" alt="Piracy Prevention Project">
+<img src="proj_piracy.jpg">
 <b>Piracy Prevention and Detection</b>
 <p>Dual-layer system using IR integration and software-based detection to prevent unauthorized content recording.</p>
-<a href="https://github.com/vishwanathkarunanithi" target="_blank">View on GitHub</a>
 </div>
 
 <div class="project-card">
-<img src="proj_shm.jpg" alt="Structural Health Monitoring Project">
+<img src="proj_shm.jpg">
 <b>Structural Health Monitoring (Software)</b>
 <p>Software-based monitoring system to analyze structural parameters and predict safety conditions.</p>
-<a href="https://github.com/vishwanathkarunanithi" target="_blank">View on GitHub</a>
 </div>
 
 <div class="project-card">
-<img src="proj_health.jpg" alt="Health Monitoring Project">
+<img src="proj_health.jpg">
 <b>Smart Non-Invasive Health Monitoring</b>
 <p>Non-invasive health monitoring system for tracking vital parameters using sensors and data analysis.</p>
-<a href="https://github.com/vishwanathkarunanithi" target="_blank">View on GitHub</a>
 </div>
 
 <div class="project-card">
-<img src="proj_energy_1.jpg" alt="Smart Energy Meter Project">
+<img src="proj_energy_1.jpg">
 <b>Electricity Tampering Detection and Smart Energy Meter</b>
 <p>Embedded IoT-based system for real-time energy monitoring and electricity theft detection.</p>
-<a href="https://github.com/vishwanathkarunanithi" target="_blank">View on GitHub</a>
 </div>
 
 <div class="project-card">
-<img src="proj_exam_1.jpg" alt="Exam Hall Allocation Project">
+<img src="proj_exam_1.jpg">
 <b>Exam Hall Allocation System (Embedded)</b>
-<p>Microcontroller-based automated exam hall seat allocation system to eliminate manual errors.</p>
-<a href="https://github.com/vishwanathkarunanithi" target="_blank">View on GitHub</a>
+<p>Microcontroller-based automated exam hall seat allocation system.</p>
 </div>
 
 <div class="project-card">
-<img src="project2.jpg" alt="Face Detection Project">
+<img src="project2.jpg">
 <b>Face Detection Using Artificial Intelligence</b>
 <p>AI-powered computer vision system for real-time face detection.</p>
-<a href="https://github.com/vishwanathkarunanithi" target="_blank">View on GitHub</a>
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<h2>Achievements, Internship and Industry Exposure</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="ach_1.jpg">
+<p>Finalist – YUKTI Innovation Challenge 2025</p>
+</div>
+
+<div class="gallery-item">
+<img src="ach_2.jpg">
+<p>First Prize – Inter College Project Expo</p>
+</div>
+
+<div class="gallery-item">
+<img src="intern_1.jpg">
+<p>Winner – 24 Hour Hackathon at VIT</p>
+</div>
+
+<div class="gallery-item">
+<img src="intern_2.jpg">
+<p>Internship – One Yes Info Tech (EEPROM Project)</p>
+</div>
+
+<div class="gallery-item">
+<img src="iv_1.jpg">
+<p>Industrial Visit – IIT Communication Laboratory</p>
+</div>
+
+<div class="gallery-item">
+<img src="iv_2.jpg">
+<p>Three First Prizes – AMS College of Engineering</p>
 </div>
 
 </div>
@@ -229,7 +289,7 @@ Exam Hall Allocation (Embedded System), and Face Detection using AI.
 <li>Home Automation using Alexa and Sinric Pro</li>
 <li>Bluetooth Controlled LED using MIT App Inventor</li>
 <li>Completed all basic LABVIEW exercises</li>
-<li>Conducted a three-day technical workshop for sixty school students</li>
+<li>Conducted a three-day technical workshop for school students</li>
 </ul>
 </section>
 
@@ -248,8 +308,8 @@ Exam Hall Allocation (Embedded System), and Face Detection using AI.
 <footer>
 <p>© 2025 Vishwanath Karunanithi</p>
 <p>Scan for Portfolio and Resume</p>
-<img src="qr_portfolio.png" alt="Portfolio QR">
-<img src="qr_resume.png" alt="Resume QR">
+<img src="qr_portfolio.png">
+<img src="qr_resume.png">
 </footer>
 
 <script>
