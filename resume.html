@@ -16,16 +16,17 @@ body {
     font-family: Calibri, "Segoe UI", Arial, sans-serif;
 }
 
+/* PAGE */
 .resume {
     width: 210mm;
-    height: 297mm;
+    min-height: 297mm;
     margin: 0 auto;
     background: #ffffff;
     display: grid;
     grid-template-columns: 30% 70%;
-    overflow: hidden;
 }
 
+/* LEFT SIDEBAR */
 .left {
     background: #1f3c88;
     color: #ffffff;
@@ -53,6 +54,7 @@ body {
     line-height: 1.35;
 }
 
+/* RIGHT CONTENT */
 .right {
     padding: 22px 28px;
 }
@@ -65,17 +67,11 @@ body {
 
 .role {
     font-size: 13px;
-    margin-bottom: 4px;
-}
-
-.tagline {
-    font-size: 12px;
-    color: #1f3c88;
     margin-bottom: 10px;
 }
 
 .section {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .section h3 {
@@ -88,10 +84,11 @@ body {
 
 .section p {
     font-size: 11.5px;
-    line-height: 1.4;
-    margin: 5px 0;
+    line-height: 1.45;
+    margin: 6px 0;
 }
 
+/* PRINT */
 @page {
     size: A4;
     margin: 0;
@@ -101,15 +98,11 @@ body {
     body {
         background: none;
     }
-
     .resume {
         margin: 0;
-        box-shadow: none;
-        page-break-after: avoid;
+        page-break-after: always;
     }
-
-    .left,
-    .right {
+    .left, .right {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
@@ -121,6 +114,7 @@ body {
 
 <div class="resume">
 
+<!-- LEFT COLUMN -->
 <div class="left">
 
 <img src="profile.jpg" alt="Profile Photo">
@@ -153,21 +147,18 @@ body {
 
 </div>
 
+<!-- RIGHT COLUMN -->
 <div class="right">
 
 <div class="name">VISHWANATH KARUNANITHI</div>
 <div class="role">Electronics and Communication Engineer</div>
-<div class="tagline">
-Finalist – YUKTI Innovation 2025 | Hackathon Winner | Embedded & IoT
-</div>
 
 <div class="section">
 <h3>PROFILE SUMMARY</h3>
 <p>
 Electronics and Communication Engineering student with strong hands-on experience in embedded systems,
-Internet of Things, software-based systems, and basic artificial intelligence applications.
-Actively involved in developing real-world solutions focused on automation, monitoring, and
-intelligent systems.
+Internet of Things, software-based systems, and artificial intelligence applications. Actively involved
+in real-world project development, hackathons, internships, and innovation challenges.
 </p>
 </div>
 
@@ -179,11 +170,11 @@ Velammal Institute of Technology, Chennai<br>
 2023 – 2027 (Pursuing) | CGPA: 8.47
 </p>
 <p>
-Higher Secondary Education (Class XII), CBSE<br>
+Higher Secondary Education (CBSE)<br>
 Cauvery International School, Tiruchirapalli | 80.60%
 </p>
 <p>
-Secondary School Education (Class X), CBSE<br>
+Secondary School Education (CBSE)<br>
 Cauvery International School, Tiruchirapalli | 81.80%
 </p>
 </div>
@@ -193,24 +184,23 @@ Cauvery International School, Tiruchirapalli | 81.80%
 
 <p>
 <strong>Piracy Prevention and Detection</strong><br>
-Designed a dual-layer piracy prevention system using IR integration and software-based detection to
-prevent unauthorized recording of digital content.
+Designed a dual-layer system using IR integration and software-based detection to prevent unauthorized
+recording of digital content.
 </p>
 
 <p>
 <strong>Structural Health Monitoring (Software)</strong><br>
-Developed a software-based monitoring system to analyze structural parameters and assist in early
-fault identification.
+Developed a software-based system to analyze structural parameters and assist in early fault detection.
 </p>
 
 <p>
 <strong>Smart Non-Invasive Health Monitoring</strong><br>
-Implemented a non-invasive system to track vital health parameters using real-time data processing.
+Implemented a non-invasive system for continuous monitoring of vital health parameters.
 </p>
 
 <p>
 <strong>Electricity Tampering Detection and Smart Energy Meter</strong><br>
-Built an embedded IoT-based system to detect electricity tampering and power theft in real time.
+Built an embedded IoT-based system for real-time energy monitoring and electricity theft detection.
 </p>
 
 <p>
@@ -220,7 +210,50 @@ Designed a microcontroller-based automated exam hall seat allocation system.
 
 <p>
 <strong>Face Detection Using Artificial Intelligence</strong><br>
-Developed an artificial intelligence-based computer vision system for real-time face detection.
+Developed an AI-based computer vision system for real-time face detection.
+</p>
+
+</div>
+
+<div class="section">
+<h3>ACHIEVEMENTS, INTERNSHIP AND INDUSTRY EXPOSURE</h3>
+
+<p>
+<strong>Finalist – YUKTI Innovation Challenge 2025</strong>, selected for the final stage based on innovation
+potential and technical feasibility.
+</p>
+
+<p>
+<strong>First Prize – Inter College Project Expo</strong> for an embedded and software-based project evaluated
+by academic and industry professionals.
+</p>
+
+<p>
+<strong>Winner – 24 Hour Hackathon at Vellore Institute of Technology</strong>, involving rapid problem solving
+and system implementation.
+</p>
+
+<p>
+<strong>Internship – One Yes Info Tech</strong>, completed an EEPROM-based embedded project with implementation
+and documentation available on GitHub.
+</p>
+
+<p>
+<strong>Industrial Visits</strong> to IIT Communication Laboratory and RETECH, gaining exposure to real-world
+engineering environments.
+</p>
+
+<p>
+<strong>Three First Prizes – AMS College of Engineering</strong> across different technical events.
+</p>
+
+<p>
+<strong>TN Skills Competition</strong>, selected up to Round 2, gaining insight into skill gaps and focused
+learning areas.
+</p>
+
+<p>
+<strong>Conducted a Technical Workshop</strong> for school students on basic electronics and embedded systems.
 </p>
 
 </div>
@@ -228,9 +261,9 @@ Developed an artificial intelligence-based computer vision system for real-time 
 <div class="section">
 <h3>MINI PROJECTS AND TECHNICAL ACTIVITIES</h3>
 <p>
-Otto Blockly robot with mobile application-based customization, home automation using Alexa and
-Sinric Pro, Bluetooth-controlled LED using MIT App Inventor, completion of LABVIEW exercises, and
-conducted a three-day technical workshop for sixty school students.
+Otto Blockly Robot with mobile application-based customization, home automation using Alexa and
+Sinric Pro, Bluetooth-controlled LED using MIT App Inventor, and completion of all basic LABVIEW
+exercises.
 </p>
 </div>
 
