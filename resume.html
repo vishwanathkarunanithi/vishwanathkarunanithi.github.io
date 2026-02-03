@@ -14,81 +14,102 @@ body {
     padding: 0;
     background: #e5e7eb;
     font-family: Calibri, "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* PAGE */
 .resume {
     width: 210mm;
+    /* Auto height allows it to grow to 2 pages */
+    height: auto; 
     min-height: 297mm;
-    margin: 0 auto;
+    margin: 20px auto;
     background: #ffffff;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 32% 68%; /* Slightly adjusted for better spacing */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* LEFT SIDEBAR */
 .left {
     background: #1f3c88;
     color: #ffffff;
-    padding: 20px;
+    padding: 25px;
 }
 
 .left img {
-    width: 130px;
-    height: 170px;
+    width: 140px;
+    height: 180px;
     object-fit: cover;
     display: block;
-    margin: 0 auto 16px;
+    margin: 0 auto 20px;
+    border: 3px solid #9fb4ff;
 }
 
 .left h3 {
-    font-size: 13px;
-    margin: 14px 0 6px;
+    font-size: 16px; /* Increased */
+    margin: 20px 0 10px;
     border-bottom: 1px solid #9fb4ff;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .left p {
-    font-size: 11.5px;
-    margin: 4px 0;
-    line-height: 1.35;
+    font-size: 14px; /* Increased from 11.5px */
+    margin: 8px 0;
+    line-height: 1.5;
 }
 
 /* RIGHT CONTENT */
 .right {
-    padding: 22px 28px;
+    padding: 30px 40px;
 }
 
 .name {
-    font-size: 22px;
+    font-size: 28px; /* Increased */
     font-weight: bold;
     color: #1f3c88;
+    text-transform: uppercase;
 }
 
 .role {
-    font-size: 13px;
-    margin-bottom: 10px;
+    font-size: 16px; /* Increased */
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #333;
 }
 
 .section {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .section h3 {
-    font-size: 13px;
+    font-size: 16px; /* Increased */
     color: #1f3c88;
     border-bottom: 2px solid #1f3c88;
-    padding-bottom: 3px;
-    margin-bottom: 6px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .section p {
-    font-size: 11.5px;
-    line-height: 1.45;
-    margin: 6px 0;
+    font-size: 14px; /* Increased from 11.5px (Normal Size) */
+    line-height: 1.5;
+    margin: 8px 0;
+    color: #333;
+    text-align: justify;
 }
 
-/* PRINT */
+/* DECLARATION SECTION */
+.declaration-sign {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* PRINT SETTINGS */
 @page {
     size: A4;
     margin: 0;
@@ -97,14 +118,22 @@ body {
 @media print {
     body {
         background: none;
+        margin: 0;
     }
     .resume {
+        width: 100%;
         margin: 0;
-        page-break-after: always;
-    }
-    .left, .right {
+        box-shadow: none;
+        /* Ensures background colors print */
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+    }
+    .left, .right {
+        height: 100%;
+    }
+    /* Force page break if needed, though auto-flow usually works best */
+    .page-break {
+        page-break-before: always;
     }
 }
 </style>
@@ -114,24 +143,40 @@ body {
 
 <div class="resume">
 
-<!-- LEFT COLUMN -->
 <div class="left">
 
 <img src="profile.jpg" alt="Profile Photo">
 
 <h3>CONTACT</h3>
-<p>Email<br>visisiva.09@gmail.com</p>
-<p>Phone<br>+91 9345247382</p>
-<p>LinkedIn<br>linkedin.com/in/vishwanath-karunanithi-087b62308</p>
-<p>GitHub<br>github.com/vishwanathkarunanithi</p>
-<p>Portfolio<br>vishwanathkarunanithi.github.io</p>
+<p>
+    <strong>Email</strong><br>
+    visisiva.09@gmail.com
+</p>
+<p>
+    <strong>Phone</strong><br>
+    +91 9345247382
+</p>
+<p>
+    <strong>LinkedIn</strong><br>
+    linkedin.com/in/<br>vishwanath-karunanithi-087b62308
+</p>
+<p>
+    <strong>GitHub</strong><br>
+    github.com/<br>vishwanathkarunanithi
+</p>
+<p>
+    <strong>Portfolio</strong><br>
+    vishwanathkarunanithi.<br>github.io
+</p>
 
 <h3>TECHNICAL SKILLS</h3>
 <p>Embedded Systems</p>
-<p>Internet of Things</p>
+<p>Internet of Things (IoT)</p>
 <p>Arduino and ESP32</p>
+<p>STM32 (Blackpill & Bluepill)</p>
 <p>Sensors and Microcontrollers</p>
-<p>Artificial Intelligence and Computer Vision (Basic)</p>
+<p>AI & Computer Vision (Basic)</p>
+<p>Digital Twin Technology</p>
 <p>Python (Basic)</p>
 
 <h3>TOOLS AND PLATFORMS</h3>
@@ -139,6 +184,7 @@ body {
 <p>MIT App Inventor</p>
 <p>LABVIEW</p>
 <p>Sinric Pro</p>
+<p>Hugging Face</p>
 <p>GitHub</p>
 
 <h3>LANGUAGES</h3>
@@ -147,7 +193,6 @@ body {
 
 </div>
 
-<!-- RIGHT COLUMN -->
 <div class="right">
 
 <div class="name">VISHWANATH KARUNANITHI</div>
@@ -158,29 +203,35 @@ body {
 <p>
 Electronics and Communication Engineering student with strong hands-on experience in embedded systems,
 Internet of Things, software-based systems, and artificial intelligence applications. Actively involved
-in real-world project development, hackathons, internships, and innovation challenges.
+in real-world project development, hackathons, internships, and innovation challenges. Passionate about creating offline AI solutions and Digital Twin technologies.
 </p>
 </div>
 
 <div class="section">
 <h3>EDUCATION</h3>
 <p>
-Bachelor of Engineering in Electronics and Communication Engineering<br>
+<strong>Bachelor of Engineering in ECE</strong><br>
 Velammal Institute of Technology, Chennai<br>
 2023 – 2027 (Pursuing) | CGPA: 8.47
 </p>
 <p>
-Higher Secondary Education (CBSE)<br>
+<strong>Higher Secondary Education (CBSE)</strong><br>
 Cauvery International School, Tiruchirapalli | 80.60%
 </p>
 <p>
-Secondary School Education (CBSE)<br>
+<strong>Secondary School Education (CBSE)</strong><br>
 Cauvery International School, Tiruchirapalli | 81.80%
 </p>
 </div>
 
 <div class="section">
 <h3>MAJOR PROJECTS</h3>
+
+<p>
+<strong>Bio-Guardian: Smart Non-Invasive Health Monitoring</strong><br>
+Implemented a non-invasive system for continuous monitoring of vital health parameters.
+Showcased at Vadiva Tech Fest (TVIS) for three days.
+</p>
 
 <p>
 <strong>Piracy Prevention and Detection</strong><br>
@@ -191,11 +242,6 @@ recording of digital content.
 <p>
 <strong>Structural Health Monitoring (Software)</strong><br>
 Developed a software-based system to analyze structural parameters and assist in early fault detection.
-</p>
-
-<p>
-<strong>Smart Non-Invasive Health Monitoring</strong><br>
-Implemented a non-invasive system for continuous monitoring of vital health parameters.
 </p>
 
 <p>
@@ -216,7 +262,22 @@ Developed an AI-based computer vision system for real-time face detection.
 </div>
 
 <div class="section">
-<h3>ACHIEVEMENTS, INTERNSHIP AND INDUSTRY EXPOSURE</h3>
+<h3>ACHIEVEMENTS & EXPOSURE</h3>
+
+<p>
+<strong>Participant – 24-Hour Hackathon</strong> at Sir M. Visvesvaraya Institute of Technology, Bangalore.
+Gained extensive experience in rapid prototyping and teamwork.
+</p>
+
+<p>
+<strong>Project Showcase – Vadiva Tech Fest</strong> at The Velammal International School (TVIS).
+Selected to display the "Bio-Guardian" project for three consecutive days.
+</p>
+
+<p>
+<strong>Conference Attendee – Jerusalem College of Engineering</strong>, participated in technical sessions
+and knowledge exchange.
+</p>
 
 <p>
 <strong>Finalist – YUKTI Innovation Challenge 2025</strong>, selected for the final stage based on innovation
@@ -234,37 +295,72 @@ and system implementation.
 </p>
 
 <p>
-<strong>Internship – One Yes Info Tech</strong>, completed an EEPROM-based embedded project with implementation
-and documentation available on GitHub.
+<strong>Internship – One Yes Info Tech</strong>, completed an EEPROM-based embedded project.
 </p>
 
 <p>
-<strong>Industrial Visits</strong> to IIT Communication Laboratory and RETECH, gaining exposure to real-world
-engineering environments.
+<strong>TN Skills Competition</strong>, selected up to Round 2.
 </p>
 
 <p>
-<strong>Three First Prizes – AMS College of Engineering</strong> across different technical events.
+<strong>Three First Prizes – AMS College of Engineering</strong> across technical events.
 </p>
 
 <p>
-<strong>TN Skills Competition</strong>, selected up to Round 2, gaining insight into skill gaps and focused
-learning areas.
-</p>
-
-<p>
-<strong>Conducted a Technical Workshop</strong> for school students on basic electronics and embedded systems.
+<strong>Industrial Visits</strong> to IIT Communication Laboratory and RETECH.
 </p>
 
 </div>
 
 <div class="section">
 <h3>MINI PROJECTS AND TECHNICAL ACTIVITIES</h3>
+
 <p>
-Otto Blockly Robot with mobile application-based customization, home automation using Alexa and
+<strong>Offline AI Heart Monitoring (Digital Twin):</strong> Developed an AI model utilizing Digital Twin technology to monitor heart health. The system is designed to function completely offline without internet connectivity.
+</p>
+
+<p>
+<strong>Offline AI Coding Assistant:</strong> Created a generative AI tool designed to assist with coding tasks. Engineered to operate locally, ensuring functionality without the need for an internet connection.
+</p>
+
+<p>
+<strong>Hugging Face Exploration:</strong> Explored and implemented various open-source models from Hugging Face for Natural Language Processing (NLP) and Computer Vision tasks.
+</p>
+
+<p>
+<strong>STM32 Development:</strong> Worked with STM32 Blackpill and Bluepill boards using the Arduino framework
+for advanced microcontroller applications.
+</p>
+
+<p>
+<strong>HVAC Controller:</strong> Developed a Heating, Ventilation, and Air Conditioning controller system.
+</p>
+
+<p>
+<strong>Otto Blockly Robot:</strong> Mobile application-based customization, home automation using Alexa and
 Sinric Pro, Bluetooth-controlled LED using MIT App Inventor, and completion of all basic LABVIEW
 exercises.
 </p>
+
+</div>
+
+<div class="section">
+<h3>DECLARATION</h3>
+<p>
+I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.
+</p>
+
+<div class="declaration-sign">
+    <div style="text-align: left;">
+        <strong>Date:</strong> ___________________<br><br>
+        <strong>Place:</strong> ___________________
+    </div>
+    <div style="text-align: right;">
+        <br><br>
+        <strong>(VISHWANATH KARUNANITHI)</strong>
+    </div>
+</div>
+
 </div>
 
 </div>
