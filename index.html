@@ -168,12 +168,46 @@ button[type="submit"]{
     border:none;
     cursor:pointer;
 }
+
+/* Resume Buttons Styling */
+.resume-btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.btn-master {
+    background: #ffffff;
+    color: #1e3a8a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-master:hover {
+    background: #e5e7eb;
+}
+.btn-growth {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-growth:hover {
+    background: #ffffff;
+    color: #1e3a8a;
+}
 </style>
 </head>
 
 <body>
 
-<!-- ADDED -->
 <div id="fullscreen" onclick="closeFull()">
     <img id="fullImg">
 </div>
@@ -184,19 +218,18 @@ button[type="submit"]{
 <img src="profile.jpg" alt="Profile Photo">
 <h1>Vishwanath Karunanithi</h1>
 <p>Electronics and Communication Engineering</p>
-<p>Embedded Systems | IoT | Artificial Intelligence</p>
+<p>Embedded Systems | VLSI | Industrial Automation | Edge AI</p>
 
 <p style="font-weight:bold; margin-top:6px;">
-Finalist – YUKTI Innovation 2025 | Hackathon Winner | Embedded & IoT
+IIT Research Park Presenter | ₹45,000+ Hackathon & Expo Wins | Paid Edge AI Intern
 </p>
 
-<p>
-<a href="Vishwanath_Karunanithi_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-&nbsp;|&nbsp;
-<a href="resume.html" target="_blank">View Resume (HTML)</a>
-</p>
+<div class="resume-btn-container">
+    <a href="Resume1.html" target="_blank" class="btn-master">📄 View Master Resume (Current)</a>
+    <a href="resume.html" target="_blank" class="btn-growth">📈 View My Growth (Old Resume)</a>
+</div>
 
-<p>
+<p style="margin-top: 20px;">
 <a href="https://www.linkedin.com/in/vishwanath-karunanithi-087b62308" target="_blank">LinkedIn</a>
 &nbsp;|&nbsp;
 <a href="https://github.com/vishwanathkarunanithi" target="_blank">GitHub</a>
@@ -214,11 +247,7 @@ Finalist – YUKTI Innovation 2025 | Hackathon Winner | Embedded & IoT
 <section id="overview">
 <h2>Overview</h2>
 <p>
-Electronics and Communication Engineering student with strong hands-on experience in embedded systems,
-Internet of Things, software-based systems, and artificial intelligence applications.
-Experienced in Piracy Prevention and Detection, Structural Health Monitoring,
-Smart Non-Invasive Health Monitoring, Electricity Tampering Detection and Smart Energy Meter,
-Exam Hall Allocation (Embedded System), and Face Detection using AI.
+Electronics and Communication Engineering student specializing in Embedded Systems (STM32/ESP32), VLSI Digital Design (SystemVerilog/Xilinx), and Industrial Automation (LabVIEW/myRIO). Proven track record of developing award-winning, commercially recognized projects through rapid prototyping, hackathons, and AI-assisted development (Prompt Engineering). Currently fast-tracking a paid Edge AI SOP Validator project at Grupo Antolin, backed by extensive experience in hardware security, health monitoring, and IoT architectures.
 </p>
 </section>
 
@@ -228,45 +257,45 @@ Exam Hall Allocation (Embedded System), and Face Detection using AI.
 
 <div class="project-card">
 <img src="proj_piracy.jpg">
-<b>Piracy Prevention and Detection</b>
-<p>Dual-layer system using IR integration and software-based detection.</p>
-</div>
-
-<div class="project-card">
-<img src="proj_shm.jpg">
-<b>Structural Health Monitoring (Software)</b>
-<p>Software-based monitoring system.</p>
+<b>Piracy Prevention and Detection (₹14,500+ Wins)</b>
+<p>Dual-layer system using IR integration and software-based steganography detection. Presented at IIT Research Park.</p>
 </div>
 
 <div class="project-card">
 <img src="proj_health.jpg">
-<b>Smart Non-Invasive Health Monitoring</b>
-<p>Non-invasive system for tracking vital health parameters.</p>
+<b>Bio-Guardian: Non-Invasive Health Monitoring</b>
+<p>Award-winning (Veltech 1st Prize) non-invasive system for tracking vital health parameters.</p>
 </div>
 
 <div class="project-card">
 <img src="proj_energy_1.jpg">
-<b>Electricity Tampering Detection and Smart Energy Meter</b>
-<p>Embedded IoT-based system for real-time energy monitoring.</p>
+<b>Smart Anti-Theft PDS & Energy Meter</b>
+<p>Embedded IoT-based systems for real-time monitoring and theft prevention utilizing STM32 logic.</p>
+</div>
+
+<div class="project-card">
+<img src="proj_shm.jpg">
+<b>Structural Health Monitoring (AI-Assisted)</b>
+<p>Software-based monitoring system rapidly developed utilizing advanced Prompt Engineering.</p>
 </div>
 
 <div class="project-card">
 <img src="proj_exam_1.jpg">
 <b>Exam Hall Allocation System (Embedded)</b>
-<p>Microcontroller-based automated seat allocation system.</p>
+<p>Microcontroller-based automated seat allocation system for educational institutions.</p>
 </div>
 
 <div class="project-card">
 <img src="project2.jpg">
 <b>Face Detection Using Artificial Intelligence</b>
-<p>AI-powered computer vision system for real-time face detection.</p>
+<p>AI-powered computer vision system for real-time face detection and recognition.</p>
 </div>
 
 </div>
 </section>
 
 <section id="gallery">
-<h2>Achievements, Internship and Industry Exposure</h2>
+<h2>Achievements, Internships & Industry Exposure</h2>
 <div class="gallery">
 
 <div class="gallery-item">
@@ -287,41 +316,42 @@ Exam Hall Allocation (Embedded System), and Face Detection using AI.
 <div class="scroll-img" onclick="openFull(this)">
 <img src="intern_1.jpg">
 </div>
-<p>Winner – 24 Hour Hackathon at VIT</p>
+<p>Winner – 24 Hour Hackathon at VIT (Direct Intern Offer)</p>
 </div>
 
 <div class="gallery-item">
 <div class="scroll-img" onclick="openFull(this)">
 <img src="intern_2.jpg">
 </div>
-<p>Internship – One Yes Info Tech (EEPROM Project)</p>
+<p>Internships – Grupo Antolin, IBM, Aadhya Skills & One Yes Info Tech</p>
 </div>
 
 <div class="gallery-item">
 <div class="scroll-img" onclick="openFull(this)">
 <img src="iv_1.jpg">
 </div>
-<p>Industrial Visit – IIT Communication Laboratory</p>
+<p>Industrial Recognition – IIT Research Park Presenter</p>
 </div>
 
 <div class="gallery-item">
 <div class="scroll-img" onclick="openFull(this)">
 <img src="iv_2.jpg">
 </div>
-<p>Three Cash Prizes – AMS College of Engineering</p>
+<p>Multiple 1st Prizes – AMS, Veltech, RMD & Techstorm Expos</p>
 </div>
 
 </div>
 </section>
 
 <section id="mini">
-<h2>Mini Projects and Technical Activities</h2>
+<h2>Mini Projects & Technical Activities</h2>
 <ul>
-<li>Otto Blockly Robot with Mobile Customisation App</li>
-<li>Home Automation using Alexa and Sinric Pro</li>
-<li>Bluetooth Controlled LED using MIT App Inventor</li>
-<li>Completed all basic LABVIEW exercises</li>
-<li>Conducted a three-day technical workshop for school students</li>
+<li><strong>HVAC Controller:</strong> Designed utilizing STM32 Bluepill for precise environmental regulation.</li>
+<li><strong>Alcohol Detection System:</strong> Peer-consulted build using MQ-series gas sensors and Arduino Nano.</li>
+<li><strong>VLSI Digital Design:</strong> SystemVerilog fundamentals (Naan Mudhalvan) & RTL Simulations (Synopsys/Xilinx).</li>
+<li><strong>Digital Twin & Offline AI:</strong> Developed an offline heart monitoring AI and local coding assistant.</li>
+<li><strong>IoT & Robotics:</strong> Otto Blockly Robot with Mobile Customization, Alexa/Sinric Pro Home Automation.</li>
+<li><strong>Industrial Computing:</strong> Completed extensive LabVIEW exercises and integrated Hugging Face AI models.</li>
 </ul>
 </section>
 
@@ -340,7 +370,7 @@ Exam Hall Allocation (Embedded System), and Face Detection using AI.
 </section>
 
 <footer>
-<p>© 2025 Vishwanath Karunanithi</p>
+<p>© 2026 Vishwanath Karunanithi</p>
 <p>Scan for Portfolio and Resume</p>
 <img src="qr_portfolio.png">
 <img src="qr_resume.png">
